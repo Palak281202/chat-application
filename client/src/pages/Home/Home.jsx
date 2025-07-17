@@ -37,9 +37,10 @@ export default function Home() {
     <div className={classes.main}>
       <h1 className={classes.pageHeading}>Welcome to notes!</h1>
       <Link to="/createNote" className={classes.link}>
-        <button className={classes.button}>Create Note</button>
+        <button className={classes.button}>+ Create Note</button>
       </Link>
       <div className={classes.notesdiv}>
+        {notes.length === 0 && <h2>No notes yet!!</h2>}
         {notes.map((note) => (
           <div key={note._id} className={classes.note}>
             <h3>{note.title}</h3>
