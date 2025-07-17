@@ -8,10 +8,9 @@ import "./App.css";
 import Signup from "./pages/Signup/Signup";
 import Login from "./pages/Login/Login";
 import Home from "./pages/Home/Home";
-import CreateChat from "./pages/CreateChat/CreateChat";
-import Chats from "./pages/Chats/Chats";
-import ChatRoom from "./pages/ChatRoom/ChatRoom";
 import ProtectedRoute from "./components/ProtectedRoute";
+import CreateNote from "./pages/CreateNote/CreateNote";
+import EditNote from "./pages/EditNote/EditNote";
 
 function App() {
   return (
@@ -22,9 +21,8 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route element={<ProtectedRoute />}>
             <Route path="/home" element={<Home />} />
-            <Route path="/create-chat" element={<CreateChat />} />
-            <Route path="/chats" element={<Chats />} />
-            <Route path="/chat/:id" element={<ChatRoom />} />
+            <Route path="/createNote" element={<CreateNote />} />
+            <Route path="/editnote/:id" element={<EditNote />} />
           </Route>
         </Routes>
       </Router>

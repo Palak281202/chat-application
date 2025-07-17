@@ -12,7 +12,7 @@ module.exports = (req, res, next) => {
     const token = header.split(" ")[1];
     console.log(token);
     const user = jwt.verify(token, process.env.JWT_SECRET);
-    req.user = user;
+    req.user = {id: user.id};
     next();
   } catch {
     res.status(401).send("Invalid token");
