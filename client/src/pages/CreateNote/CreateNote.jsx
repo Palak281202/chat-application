@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import classes from "./CreateNote.module.css";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import api from "../../services/api.js";
 
 export default function CreateNote() {
