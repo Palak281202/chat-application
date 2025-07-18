@@ -39,7 +39,7 @@ export default function CreateNote() {
             required
             placeholder="text...."
             className={classes.input}
-            rows={10}
+            rows={7}
           />
         </div>
         <div className={classes.divbuttons}>
