@@ -14,7 +14,7 @@ const app = express();
 // app.use(cors());
 app.use(
   cors({
-    origin: "http://localhost:3000", // or the actual frontend port you're using
+    origin: "https://chat-application-ruddy-tau.vercel.app/", // or the actual frontend port you're using
     credentials: true,
     allowedHeaders: ["Content-Type", "Authorization"],
   })
