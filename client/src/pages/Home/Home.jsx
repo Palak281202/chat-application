@@ -41,16 +41,26 @@ export default function Home() {
       </Link>
       <div className={classes.notesdiv}>
         {notes.length === 0 && <h2>No notes yet!!</h2>}
-        {notes.map((note) => (
-          <div key={note._id} className={classes.note}>
-            <h3>{note.title}</h3>
-            <p>{note.text}</p>
-            <button className={classes.button} onClick={() => deleteNoteHandler(note._id)}>Delete</button>
-            <button className={classes.button} onClick={() => navigate(`/editnote/${note._id}`)}>
-              Edit
-            </button>
-          </div>
-        ))}
+        <div className={classes.noteslist}>
+          {notes.map((note) => (
+            <div key={note._id} className={classes.note}>
+              <h3>{note.title}</h3>
+              <p>{note.text}</p>
+              <button
+                className={classes.button}
+                onClick={() => deleteNoteHandler(note._id)}
+              >
+                Delete
+              </button>
+              <button
+                className={classes.button}
+                onClick={() => navigate(`/editnote/${note._id}`)}
+              >
+                Edit
+              </button>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
